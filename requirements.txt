@@ -1,0 +1,9 @@
+streamlit
+ollama
+pyyaml
+pdfplumber
+PyPDF2
+sentence-transformers
+scikit-learn
+numpy
+jupyter
