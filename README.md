@@ -16,3 +16,16 @@ information retrieval or machine learning tasks.
   pipeline works along with supporting scripts (`process_document.py`,
   `to_script.py`, etc.).
 
+
+├── src/                      # Core Python modules
+│   ├── chunker.py
+│   └── document_loader.py
+├── Full_source_code.ipynb     # Example notebook showing the full model
+├── process_document.py        # Helper script for loading/chunking
+├── to_script.py               # Utility script used by the notebook
+├── change_nb.py               # Notebook path converter
+├── requirements.txt           # Python dependencies
+└── README.md                  # This file
+```
+
+
