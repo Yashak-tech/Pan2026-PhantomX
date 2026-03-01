@@ -367,7 +367,7 @@ This project was built for the **Pan2026 Hackathon** targeting the challenge of 
 
 <div align="center">
 
-Made with ⚡ by PhantomX &nbsp;|&nbsp; Pan2026 Hackathon
+Made with love by PhantomX &nbsp;|&nbsp; Pan2026 Hackathon
 
 [![GitHub](https://img.shields.io/badge/GitHub-Yashak--tech-181717?style=flat&logo=github)](https://github.com/Yashak-tech/Pan2026-PhantomX)
 
