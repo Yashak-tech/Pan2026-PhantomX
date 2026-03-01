@@ -1,0 +1,83 @@
+[
+  {
+    "type": "exceptions",
+    "value": "subject to",
+    "source": {
+      "chunk_id": "para_16",
+      "level": 1,
+      "page_number": 20
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "must",
+    "source": {
+      "chunk_id": "para_16",
+      "level": 1,
+      "page_number": 20
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "must",
+    "source": {
+      "chunk_id": "para_16",
+      "level": 1,
+      "page_number": 20
+    }
+  },
+  {
+    "type": "risks",
+    "value": "fine",
+    "source": {
+      "chunk_id": "para_16",
+      "level": 1,
+      "page_number": 20
+    }
+  },
+  {
+    "type": "risks",
+    "value": "fine",
+    "source": {
+      "chunk_id": "para_16",
+      "level": 1,
+      "page_number": 20
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "shall",
+    "source": {
+      "chunk_id": "para_17",
+      "level": 1,
+      "page_number": 21
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "shall",
+    "source": {
+      "chunk_id": "para_17",
+      "level": 1,
+      "page_number": 21
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "shall",
+    "source": {
+      "chunk_id": "para_18",
+      "level": 1,
+      "page_number": 22
+    }
+  },
+  {
+    "type": "obligations",
+    "value": "shall",
+    "source": {
+      "chunk_id": "para_20",
+      "level": 1,
+      "page_number": 24
+    }
+  }
+]
