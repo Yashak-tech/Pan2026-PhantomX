@@ -1,0 +1,84 @@
+# Compression Configuration
+
+compression:
+  levels: 4
+
+  chunking:
+    paragraph_max_tokens: 500
+    section_max_paragraphs: 15
+    chapter_max_sections: 8
+    overlap_tokens: 50
+
+  target_ratios:
+    level_1: 0.5
+    level_2: 0.7
+    level_3: 0.8
+    level_4: 0.9
+
+# Critical content extraction
+critical_content:
+  extract:
+    numbers: true
+    dates: true
+    exceptions: true
+    obligations: true
+    risks: true
+
+  patterns:
+    numeric_threshold:
+      - '\d+\s*(days|hours|minutes|months|years|weeks)'
+      - '\$\d+[\d,]*\.?\d*'
+      - '\d+\.?\d*\s*(percent|%)'
+      - '(maximum|minimum|at least|no more than|up to)\s+\d+'
+
+    date_patterns:
+      - '\d{1,2}/\d{1,2}/\d{2,4}'
+      - '\d{1,2}-\d{1,2}-\d{2,4}'
+      - '(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}'
+
+    exceptions:
+      - "unless"
+      - "except (when|if|where|for)"
+      - "only if"
+      - "provided that"
+      - "subject to"
+      - "with the exception of"
+
+    obligations:
+      - '\b(must|shall|required to|obligated to)\b'
+      - '\bmandatory\b'
+      - '\bcompulsory\b'
+
+    risks:
+      - "(may result in|could lead to|risk of)"
+      - "(failure to|non-compliance)"
+      - "(penalty|fine|disciplinary action|termination)"
+      - "(warning|caution)"
+
+# Contradiction detection
+contradictions:
+  enabled: true
+  similarity_threshold: 0.7
+  confidence_threshold: 0.6
+
+# LLM Configuration
+llm:
+  provider: "ollama"
+  model: "llama3:latest"
+  base_url: "http://localhost:11434"
+  temperature: 0.3
+  max_tokens: 2000
+  timeout: 120
+
+# Traceability
+traceability:
+  store_original_text: true
+  track_compression_path: true
+  generate_citations: true
+
+# Output
+output:
+  format: "json"
+  include_statistics: true
+  include_explainability: true
+  save_intermediate: false
