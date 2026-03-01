@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/badge/Model-llama3%3Alatest-10b981?style=for-the-badge&logo=ollama&logoColor=white" alt="Llama3"/>
 <img src="https://img.shields.io/badge/UI-Streamlit-ef4444?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
 <a href="https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Live%20Demo-Streamlit%20Cloud-ff4b4b?style=for-the-badge" alt="Live Demo"/></a>
+<a href="https://drive.google.com/file/d/17Vy5ZuOdIsuCho3M7vP0HAASBG1868EW/view?usp=sharing"><img src="https://img.shields.io/badge/%F0%9F%8E%AC%20Pitch%20Video-Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Pitch Video"/></a>
 
 # ⚡ PhantomX — Contextual Compression Engine
 
@@ -11,7 +12,7 @@
 
 **A hierarchical, traceable document compression system that preserves decision-critical information, surfaces contradictions, and supports full drill-down — powered by a local LLM.**
 
-[🚀 Live Demo](https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/) · [📖 Architecture](#-system-architecture) · [⚙️ Setup](#%EF%B8%8F-setup--installation) · [🎯 Features](#-key-features)
+[🚀 Live Demo](https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/) · [🎬 Pitch Video](https://drive.google.com/file/d/17Vy5ZuOdIsuCho3M7vP0HAASBG1868EW/view?usp=sharing) · [📖 Architecture](#-system-architecture) · [⚙️ Setup](#%EF%B8%8F-setup--installation) · [🎯 Features](#-key-features)
 
 </div>
 
