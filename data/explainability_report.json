@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-03-01T00:55:23.828971",
+  "generated_at": "2026-03-01T14:20:41.488457",
   "compression_statistics": {
     "original_chars": 747856,
-    "compressed_chars": 1930
+    "compressed_chars": 1889
   },
   "content_preservation": {
     "total_critical_items": 9
   },
-  "contradictions": 35
+  "contradictions": 34
 }
