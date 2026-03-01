@@ -1,9 +1,9 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/Pan2026-PhantomX-3b82f6?style=for-the-badge&logo=lightning&logoColor=white" alt="PhantomX"/>
-
 <img src="https://img.shields.io/badge/Model-llama3%3Alatest-10b981?style=for-the-badge&logo=ollama&logoColor=white" alt="Llama3"/>
 <img src="https://img.shields.io/badge/UI-Streamlit-ef4444?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+<a href="https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/"><img src="https://img.shields.io/badge/%F0%9F%9A%80%20Live%20Demo-Streamlit%20Cloud-ff4b4b?style=for-the-badge" alt="Live Demo"/></a>
 
 # ⚡ PhantomX — Contextual Compression Engine
 
@@ -11,7 +11,7 @@
 
 **A hierarchical, traceable document compression system that preserves decision-critical information, surfaces contradictions, and supports full drill-down — powered by a local LLM.**
 
-[🚀 Live Demo](#-deployment) · [📖 Architecture](#-system-architecture) · [⚙️ Setup](#%EF%B8%8F-setup--installation) · [🎯 Features](#-key-features)
+[🚀 Live Demo](https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/) · [📖 Architecture](#-system-architecture) · [⚙️ Setup](#%EF%B8%8F-setup--installation) · [🎯 Features](#-key-features)
 
 </div>
 
@@ -330,7 +330,11 @@ Fallback: If the LLM fails, the original text is truncated (no silent data loss)
 
 ## 🚀 Deployment
 
-### Option 1: Streamlit Community Cloud (Recommended — Free)
+### Option 1: Streamlit Community Cloud ✅ Live Now
+
+> 🌐 **[https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/](https://pan2026-phantomx-bpmymvvzmu4rcyhwykornb.streamlit.app/)**
+
+The app is already deployed and live! To deploy your own fork:
 
 1. Visit [share.streamlit.io](https://share.streamlit.io)
 2. Connect your GitHub account
