@@ -691,13 +691,23 @@ elif view == "⚠️  Critical Facts & Risks":
             <div style="font-size:0.8rem;font-weight:700;color:{color};text-transform:uppercase;letter-spacing:.08em;margin:1.2rem 0 0.5rem 0;">{icon} {t}</div>
             """, unsafe_allow_html=True)
             for j, item in enumerate(items, 1):
-                with st.expander(f"{icon} {item['value'][:80]}{'…' if len(item['value'])>80 else ''}"):
-                    card(f"<strong>Value:</strong><br><span style='color:{color};font-weight:600'>{item['value']}</span>", accent=color, padding="0.9rem 1.2rem")
-                    st.markdown(f"""
-                    <div style="font-size:0.75rem;color:#64748b;margin-top:0.4rem;">
-                        🔗 Chunk: <code>{item['source']['chunk_id']}</code>  ·  📄 Page {item['source']['page_number']}
-                    </div>
-                    """, unsafe_allow_html=True)
+                val_display = item['value'][:80] + ('…' if len(item['value']) > 80 else '')
+                val_safe = item['value'].replace('"', '&quot;').replace('<', '&lt;')
+                chunk_id = item['source']['chunk_id']
+                page_num = item['source']['page_number']
+                st.markdown(f"""
+                <details class="custom-acc">
+                  <summary>
+                    <span class="acc-arrow">&#9654;</span>
+                    <span style="color:{color};font-size:0.88rem;font-weight:600;">{val_display}</span>
+                  </summary>
+                  <div class="acc-body">
+                    <div style="background:rgba(13,28,54,0.82);border:1px solid rgba(99,179,237,0.14);border-left:3px solid {color};border-radius:12px;padding:0.9rem 1.2rem;line-height:1.7;color:{color};font-weight:600;font-size:0.9rem;margin-bottom:0.6rem;">{val_safe}</div>
+                    <div style="font-size:0.75rem;color:#64748b;">&#128279; Chunk: <code style="color:#93c5fd;background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;">{chunk_id}</code> &nbsp;&middot;&nbsp; &#128196; Page {page_num}</div>
+                  </div>
+                </details>
+                """, unsafe_allow_html=True)
+
 
 
 # =========================================================
@@ -724,19 +734,33 @@ elif view == "🚨  Contradictions":
         for i, c in enumerate(contradictions, 1):
             conf = c['confidence']
             conf_color = "#ef4444" if conf > 0.9 else ("#f59e0b" if conf > 0.75 else "#64748b")
-            with st.expander(f"🚨  Contradiction {i}   ·   Confidence {conf:.2%}"):
-                col_a, col_b = st.columns(2)
-                with col_a:
-                    st.markdown('<div style="font-size:0.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:0.4rem">Statement A</div>', unsafe_allow_html=True)
-                    card(c["statement_a"]["content"].replace("\n","<br>"), accent="#ef4444", padding="0.9rem 1.2rem")
-                with col_b:
-                    st.markdown('<div style="font-size:0.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:0.4rem">Statement B</div>', unsafe_allow_html=True)
-                    card(c["statement_b"]["content"].replace("\n","<br>"), accent="#f59e0b", padding="0.9rem 1.2rem")
-                st.markdown(f"""
-                <div style="background:rgba(239,68,68,0.05);border:1px dashed rgba(239,68,68,0.25);border-radius:8px;padding:0.7rem 1rem;margin-top:0.5rem;font-size:0.78rem;color:#94a3b8;">
-                    ⚠️ Similarity confidence: <strong style="color:{conf_color}">{conf:.2%}</strong>  ·  Review recommended for policy clarity.
+            st_a = c["statement_a"]["content"].replace('\n','<br>').replace('"','&quot;')
+            st_b = c["statement_b"]["content"].replace('\n','<br>').replace('"','&quot;')
+            st.markdown(f"""
+            <details class="custom-acc">
+              <summary>
+                <span class="acc-arrow">&#9654;</span>
+                Contradiction {i}
+                &nbsp;<span style="color:{conf_color};font-size:0.78rem;font-weight:700;">Confidence {conf:.2%}</span>
+              </summary>
+              <div class="acc-body">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                  <div>
+                    <div style="font-size:0.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:0.4rem;">Statement A</div>
+                    <div style="background:rgba(13,28,54,0.82);border:1px solid rgba(239,68,68,0.2);border-left:3px solid #ef4444;border-radius:12px;padding:0.9rem 1.2rem;line-height:1.7;color:#cbd5e1;font-size:0.88rem;">{st_a}</div>
+                  </div>
+                  <div>
+                    <div style="font-size:0.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.07em;margin-bottom:0.4rem;">Statement B</div>
+                    <div style="background:rgba(13,28,54,0.82);border:1px solid rgba(245,158,11,0.2);border-left:3px solid #f59e0b;border-radius:12px;padding:0.9rem 1.2rem;line-height:1.7;color:#cbd5e1;font-size:0.88rem;">{st_b}</div>
+                  </div>
                 </div>
-                """, unsafe_allow_html=True)
+                <div style="background:rgba(239,68,68,0.05);border:1px dashed rgba(239,68,68,0.25);border-radius:8px;padding:0.7rem 1rem;margin-top:0.8rem;font-size:0.78rem;color:#94a3b8;">
+                  Similarity confidence: <strong style="color:{conf_color}">{conf:.2%}</strong> &nbsp;&middot;&nbsp; Review recommended for policy clarity.
+                </div>
+              </div>
+            </details>
+            """, unsafe_allow_html=True)
+
 
 
 # =========================================================
