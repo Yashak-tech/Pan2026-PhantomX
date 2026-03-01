@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/Pan2026-PhantomX-3b82f6?style=for-the-badge&logo=lightning&logoColor=white" alt="PhantomX"/>
-<img src="https://img.shields.io/badge/Track%204-Contextual%20Compression-8b5cf6?style=for-the-badge" alt="Track 4"/>
+
 <img src="https://img.shields.io/badge/Model-llama3%3Alatest-10b981?style=for-the-badge&logo=ollama&logoColor=white" alt="Llama3"/>
 <img src="https://img.shields.io/badge/UI-Streamlit-ef4444?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
 
