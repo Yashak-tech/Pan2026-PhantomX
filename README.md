@@ -7,7 +7,7 @@
 
 # ⚡ PhantomX — Contextual Compression Engine
 
-### *Pan2026 Hackathon · Track 4: Contextual Compression for Extreme Long Inputs*
+### *Pan2026 Hackathon  Contextual Compression for Extreme Long Inputs*
 
 **A hierarchical, traceable document compression system that preserves decision-critical information, surfaces contradictions, and supports full drill-down — powered by a local LLM.**
 
